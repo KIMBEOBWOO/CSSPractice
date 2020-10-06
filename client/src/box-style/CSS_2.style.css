@@ -1,0 +1,26 @@
+
+/***********************************************************************************
+content
+
+일반 태그가 차지하는 공간 width , height 가 content
+padding 과 margin , border 모두 width 에 포함되지 않는다
+최종 width = content_width + padding + margin +
+*************************************************************************************/
+.content-basic {
+    background-color: teal;
+}
+
+.content-padding {
+    background-color: thistle;
+    padding: 15px;
+}
+
+.content-margin {
+    background-color: tomato;
+    margin: 15px;
+}
+
+.content-border {
+    background-color: white;
+    border: 5px solid brown;
+}

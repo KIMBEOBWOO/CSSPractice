@@ -1,0 +1,113 @@
+
+/***********************************************************************************
+position
+
+태그들의 위치를 결정한다.
+static (default) , relative , absolute , fixed
+*************************************************************************************/
+
+/* static (default) 좌 -> 우 , 상 -> 하 쌓이는 구조 */
+.static-tag {
+    position: static;
+    background-color: teal;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* relative static 에서 위치를 조금씩 변경 기존의 static 쌓이던 방식은 그대로 유지 위치 값으로 변경 */
+.relative-top {
+    position: relative;
+    top: 15px;
+
+    background-color: royalblue;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.relative-right {
+    position: relative;
+    right: 15px;
+
+    background-color: royalblue;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.relative-bottom {
+    position: relative;
+    bottom: 15px;
+
+    background-color: royalblue;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.relative-left {
+    position: relative;
+    left: 15px;
+
+    background-color: royalblue;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+/*
+absolute
+
+position 이 static 이 아닌, relative || absolute || fixed 인 부모를 기준으로 이동
+부모중에 해당 position 가진 태그가 없다면, 가장위의 태그 (body) 가 된다.           */
+
+.absolute-parent {
+    position: relative;
+
+    background-color: tomato;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+
+    width: 300px;
+    height: 300px;
+}
+
+.absolute-child {
+    position: absolute;
+    
+    /* 부모의 content 내에서 위치 결정, 부모가 static 이 아니기 때문에 */
+    /* 자신의 우측 최하단 점을 기준으로 position 결정 */
+    right: 80px;   
+    bottom : 220px;
+
+    background-color: wheat;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+
+    width: 90px;
+    height: 90px;
+}
+
+/* fixded , 브라우저 화면 특정 위치에 고정 렌더링 */
+.fixed {
+    position: fixed;
+
+    top: 100px;
+    left: 500px;
+
+    background-color: wheat;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
